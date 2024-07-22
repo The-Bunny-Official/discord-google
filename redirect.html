@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <base target="_top">
+    <title>Redirect Page</title>
+    <script>
+      function loadUp(){
+        document.getElementById("auth").innerText = window.authUrl;
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      h1 {
+        color: #d9534f;
+      }
+
+      h2 {
+        color: #5bc0de;
+        margin: 10px 0;
+      }
+
+      #auth {
+        display: block;
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        max-width: 80%;
+        word-wrap: break-word;
+        text-align: center;
+        overflow-wrap: break-word;
+      }
+
+      a {
+        color: #0275d8;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body onload="loadUp()">
+    <h1>Due to Restrictions, We Cannot Redirect You</h1>
+    <h2>Please copy the link below into your browser:</h2>
+    <h2 id="auth"></h2>
+    <p>If you have any issues, please contact support.</p>
+</body>
+</html>

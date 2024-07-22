@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <script>
+    function loadForm() {
+      const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdt9o5_sfUUQQEQCBrzAFkYb9i-Reu8ohXizBcpE67p4HXIeg/viewform?embedded=true';
+      const userInfo = window.userInfo;
+
+      // Create a form element to embed the Google Form
+      const formFrame = document.createElement('iframe');
+      formFrame.src = formUrl;
+      formFrame.width = '100%';
+      formFrame.height = '800';
+      
+      // Append to the form
+      const formContainer = document.getElementById('formContainer');
+      formContainer.appendChild(formFrame);
+    }
+  </script>
+</head>
+<body onload="loadForm()">
+  <h1>Google Form</h1>
+  <div id="formContainer"></div>
+</body>
+</html>
